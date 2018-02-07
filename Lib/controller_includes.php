@@ -2,7 +2,7 @@
 	// functions suggested to include into application controllers
 	
 	
-	protected function _getMailInstance() {
+	function _getMailInstance() {
 		App::uses('CakeEmail', 'Network/Email');
 		$emailConfig = Configure::read('Users.emailConfig');
 		if($emailConfig) {
@@ -14,7 +14,7 @@
 	
 	
 	// to be extended - the SecurityComponent blackHole Callback on application side
-	public function blackHole($type = null) {
+	function blackHole($type = null) {
 		switch($type) {
 			case 'secure':
 				if($this->action != 'blackHole') {

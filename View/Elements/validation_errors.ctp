@@ -13,7 +13,7 @@ if(!empty($errors) OR ($modelName AND !empty($this->validationErrors[$modelName]
 			foreach($errors as $field => $error) {
 				?>
 				<dt><?php echo Inflector::humanize($field); ?></dt>
-				<dd><?php echo implode('<br />', $error); ?></dd>
+				<dd><?php echo implode('<br>', $error); ?></dd>
 				<?php
 			}
 			?>
